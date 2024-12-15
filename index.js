@@ -468,7 +468,7 @@ function createParticle() {
         p[i] = new Particle();
 		//console.log(randomNum);
         // Add green color to a random particle based on probability
-        if (randomNum == 1) {
+        if (randomNum === Math.floor(Math.random() * 8000000000) + 1) {
             p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
             //console.log("Math.random()");
            
@@ -501,7 +501,7 @@ function loop() {
 	//console.log("randomNum"+ randomNum);
 	
 	
-	if (randomNum < 2) {
+	if (randomNum === Math.floor(Math.random() * 8000000000) + 1) {
 		i =Math.floor(Math.random()*1000)
 		p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
 		//console.log("Math.random()");
