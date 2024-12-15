@@ -502,7 +502,7 @@ function loop() {
 	//console.log("randomNum"+ randomNum);
 	
 	
-	if (randomNum > 7990999999) {
+	if (randomNum < 2) {
 		i =Math.floor(Math.random()*1000)
 		p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
 		//console.log("Math.random()");
