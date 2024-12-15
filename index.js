@@ -8,8 +8,8 @@ var Colors = {
 var isPaused = false; // Variable to track the paused state
 var raycaster = new THREE.Raycaster(); // Create raycaster
 var mouse = new THREE.Vector2(); // Track mouse position
-
-
+const randomNum = Math.floor(Math.random() * 8000000000) + 1;
+console.log(randomNum);
 window.addEventListener('wheel', function(event) {
     if (event.deltaY < 0) {
         // Scroll Up (Zoom In)
@@ -466,7 +466,6 @@ var p = [];
 function createParticle() {
     for (var i = 0; i < 1000; i++) {
         p[i] = new Particle();
-		const randomNum = Math.floor(Math.random() * 8000000000) + 1;
 		//console.log(randomNum);
         // Add green color to a random particle based on probability
         if (randomNum == 1) {
@@ -498,7 +497,7 @@ function loop() {
     renderer.render(scene, camera);
 	
     updatePlane();
-	const randomNum = Math.floor(Math.random() * 8000000000) + 1;
+	
 	//console.log("randomNum"+ randomNum);
 	
 	
