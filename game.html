@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try your luck</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+   
+  
+
+    <audio autoplay loop>
+      <source src="audiointerstellar.mp3" type="audio/mp3">
+     
+     
+  </audio>
+   
+    
+    
+    <div id="world"></div>
+    <div class="txt">Move the mouse up or down to change the speed. Press P to pause and click on green star to win</div>
+    <!-- Link to the external JS file -->
+   <!-- Custom Alert -->
+<div id="alertOverlay" class="alert-overlay">
+  <div class="alert-box">
+      <h2>Congratulations!</h2>
+      <p>You win!</p>
+      <button class="alert-btn" onclick="closeAlert()">Close</button>
+  </div>
+</div>
+
+  
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+
+  
+  <script src="index.js"></script>
+</html>

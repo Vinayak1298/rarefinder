@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+* {
+	margin: 0;
+	padding: 0;
+	overflow:hidden''
+}
+
+
+
+#world {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(#7882ff, #ff8d8d);
+}
+
+.txt{
+	position:absolute;
+	color:#fff;
+	text-align:center;
+	left:0;
+	right:0;
+	top:30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:100;
+	font-size:20px;
+}
+
+/* The background overlay for the alert */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;  /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* The alert box container */
+.alert-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+/* Alert title style */
+.alert-box h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Alert message style */
+.alert-box p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #555;
+}
+
+/* Button to close the alert */
+.alert-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.alert-btn:hover {
+    background-color: #45a049;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
