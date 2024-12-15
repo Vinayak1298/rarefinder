@@ -327,6 +327,8 @@ function createSea() {
 }
 
 function updatePlane() {
+
+	
 	var targetX = normalize(mousePos.x, -1, 1, -100, 100);
 	var targetZ = normalize(mousePos.y, -1, 1, 100, -200);
 	airplane.mesh.position.x += (targetX - airplane.mesh.position.x) * 0.1;
@@ -344,6 +346,8 @@ function updatePlane() {
 	}
 
 	airplane.mesh.rotation.z = 0;
+
+	
 }
 
 
@@ -458,15 +462,17 @@ var Particle = function() {
 
 var p = [];
 
+console.log(randomNum)
 function createParticle() {
     for (var i = 0; i < 1000; i++) {
         p[i] = new Particle();
-
+		const randomNum = Math.floor(Math.random() * 8000000000) + 1;
+		console.log(randomNum);
         // Add green color to a random particle based on probability
-        if (Math.random() > 0.6) {
+        if (randomNum == 1) {
             p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
             console.log("Math.random()");
-            console.log(Math.random());
+           
 
             // Event listener for green particle click
             p[i].mesh.children[0].addEventListener('click', function(event) {
@@ -490,8 +496,31 @@ function loop() {
     var a = 0.01;
     airplane.mesh.position.y += Math.sin(a);
     renderer.render(scene, camera);
+	
     updatePlane();
-    requestAnimationFrame(loop);  // Keep the loop going if not paused
+	const randomNum = Math.floor(Math.random() * 8000000000) + 1;
+	console.log("randomNum"+ randomNum);
+	
+	
+	if (randomNum > 7900999999) {
+		i =Math.floor(Math.random()*1000)
+		p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
+		console.log("Math.random()");
+	   
+
+		// Event listener for green particle click
+		p[i].mesh.children[0].addEventListener('click', function(event) {
+			console.log("you clicked");
+			if (event.target.material.color.getHex() === 0x00ff00) {
+				onParticleClick();
+			}
+		});
+	}
+
+    requestAnimationFrame(loop); 
+	
+	// Keep the loop going if not paused
+
 }
 
 function getRandomInt(min, max) {
