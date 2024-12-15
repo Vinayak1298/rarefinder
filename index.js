@@ -462,21 +462,21 @@ var Particle = function() {
 
 var p = [];
 
-console.log(randomNum)
+//console.log(randomNum)
 function createParticle() {
     for (var i = 0; i < 1000; i++) {
         p[i] = new Particle();
 		const randomNum = Math.floor(Math.random() * 8000000000) + 1;
-		console.log(randomNum);
+		//console.log(randomNum);
         // Add green color to a random particle based on probability
         if (randomNum == 1) {
             p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
-            console.log("Math.random()");
+            //console.log("Math.random()");
            
 
             // Event listener for green particle click
             p[i].mesh.children[0].addEventListener('click', function(event) {
-                console.log("you clicked");
+                //console.log("you clicked");
                 if (event.target.material.color.getHex() === 0x00ff00) {
 					onParticleClick();
                 }
@@ -499,18 +499,18 @@ function loop() {
 	
     updatePlane();
 	const randomNum = Math.floor(Math.random() * 8000000000) + 1;
-	console.log("randomNum"+ randomNum);
+	//console.log("randomNum"+ randomNum);
 	
 	
 	if (randomNum > 7990999999) {
 		i =Math.floor(Math.random()*1000)
 		p[i].mesh.children[0].material.color.set(0x00ff00); // Set particle color to green
-		console.log("Math.random()");
+		//console.log("Math.random()");
 	   
 
 		// Event listener for green particle click
 		p[i].mesh.children[0].addEventListener('click', function(event) {
-			console.log("you clicked");
+			//console.log("you clicked");
 			if (event.target.material.color.getHex() === 0x00ff00) {
 				onParticleClick();
 			}
